@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* navbar */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    padding: 10px 80px;
+}
+
+header img {
+    width: 13%;
+}
+
+header .burger-menu {
+    display: none;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+header nav .media {
+    display: flex;
+    gap: 20px;
+}
+
+header nav .menu {
+    display: flex;
+    gap: 20px;
+    align-self: center;
+    transition: all 2s;
+}
+
+header nav .menu li a {
+    color: #fff
+}
+
+header nav .menu li:last-child {
+    position: relative;
+}
+
+header nav .menu li:last-child i {
+    transform: rotate(180deg);
+    margin: 0 5px;
+}
+
+header nav .menu .drop {
+    width: 150px;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 10px;
+    background-color: #fff;
+    position: absolute;
+    top: 40px;
+    display: none;
+
+}
+
+header nav .menu .drop li a {
+    color: black !important;
+}
+
+header nav .menu li:last-child:hover .drop {
+    display: flex;
+
+}
+
+/* home */
+main section #home {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../image/header-bg.jpg.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 120px 100px;
+}
+
+main section #home h1 {
+    max-width: 526px;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+main section #home .buttons {
+    margin-top: 20px;
+}
+
+main section #home .buttons button {
+    border: none;
+    padding: 10px 50px;
+    border-radius: 25px;
+    text-transform: uppercase;
+}
+
+/* about */
+main section #about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 100px 100px;
+    gap: 90px;
+}
+
+main section #about .video {
+    background: url(../image/video-bg.jpg.webp) no-repeat center;
+    background-size: cover;
+    width: 480px;
+    height: 350px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main section #about .video img {
+    position: relative;
+    z-index: 3;
+}
+
+main section #about .video::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+}
+
+main section #about .text-about h6 {
+    color: #b68834;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+main section #about .text-about h1 {
+    max-width: 400px;
+}
+
+main section #about .text-about span {
+    color: #000;
+    font-weight: 400;
+}
+
+main section #about .text-about p {
+    max-width: 369px;
+    color: #777;
+}
+
+/* cofe */
+main section #cofe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(77, 77, 77, 0.1);
+    padding: 120px 0;
+}
+
+main section #cofe .cofe-menu {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 80px 20px;
+    gap: 20px;
+}
+
+main section #cofe .cofe-menu>div {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 10px 30px 0px rgba(182, 136, 52, 0.2);
+    border-radius: 10px;
+}
+
+main section #cofe .cofe-menu div>p {
+    color: #777;
+}
+
+main section #cofe .cofe-menu div .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+main section #cofe .cofe-menu div .text h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+main section #cofe .cofe-menu div .text p {
+    color: #b68834;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* review */
+main section #review {
+    display: flex;
+    flex-direction: column;
+
+
+    align-items: center;
+    padding: 120px 100px;
+}
+
+main section #review .text-review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+main section #review .image-review {
+    display: flex;
+    gap: 0px;
+    justify-content: center;
+    padding: 40px 0px;
+
+}
+
+main section #review .image-review div:first-child img:first-child {
+    margin-bottom: 30px;
+}
+
+main section #review .image-review div:first-child img {
+    width: 77%;
+}
+
+main section #review .image-review div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+
+}
+
+main section #review .image-review div:last-child img:first-child {
+    width: 78%;
+}
+
+main section #review .image-review div:last-child .img {
+    width: 37.8%;
+    object-fit: cover;
+}
+
+/* blog */
+main section #blog {
+    background-color: #b68834;
+    padding: 120px;
+    display: flex;
+    flex-direction: column;
+
+
+    gap: 80px;
+    color: #fff;
+}
+
+main section #blog .text-blog {
+    text-align: center;
+
+}
+
+main section #blog .text-blog h1 {
+    margin-bottom: 10px;
+}
+
+main section #blog .comment-blog {
+    display: flex;
+    gap: 40px;
+
+}
+
+main section #blog .list-blog {
+    display: flex;
+    justify-content: space-between;
+}
+
+main section #blog .list-blog div h1 {
+    font-size: 60px;
+    font-weight: 100;
+}
+
+/* pages */
+main section #pages {
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main section #pages .text-pages {
+    text-align: center;
+}
+
+main section #pages .list-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 80px;
+}
+
+main section #pages .list-pages div {
+    padding: 0 10px;
+}
+
+main section #pages .list-pages div img {
+    width: 96%;
+}
+
+main section #pages .list-pages div ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 20px 0;
+}
+
+main section #pages .list-pages div ul li {
+    border: 1px solid #eee;
+    border-radius: 20px;
+    padding: 5px 20px;
+    font-size: 12px;
+
+}
+
+main section #pages .list-pages div h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+main section #pages .list-pages div p {
+    margin-bottom: 10px;
+    font-size: 14px !important;
+    color: #777;
+    max-width: 420px;
+}
+
+main section #pages .list-pages div p:last-child {
+
+    font-weight: 500;
+    color: #222;
+}
+
+/* footer */
+footer {
+    padding-top: 200px;
+    background-image: url('../image/footer-bg.jpg.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+}
+
+footer>p {
+    text-align: center;
+}
+
+footer .footer {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 50px;
+}
+
+footer .footer div p {
+    padding: 0;
+}
+
+footer .footer>div p {
+    font-size: 14px;
+    max-width: 345px;
+}
+
+footer .footer div .input {
+    display: flex;
+    align-items: center;
+}
+
+footer .footer div .input input {
+    width: 280px;
+    outline: none;
+    padding: 8px 18px;
+}
+
+footer .footer div .input button {
+    padding: 8px 18px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    background-color: #b68834;
+}
+
+footer .footer div ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+
+}
+
+footer .footer div ul li a i {
+    color: #fff;
+    opacity: 0.6;
+    font-size: 20px;
+}
+
+footer .footer div ul li a:hover i {
+    opacity: 1;
+}
+
+/* tablet */
+@media (max-width:817px) {
+    /* nav */
+    header {
+        padding: 10px 5px;
+    }
+
+    header .burger-menu {
+        display: flex;
+        position: absolute;
+        right: 1%;
+        font-size: 28px;
+    }
+
+    header .burger-menu button {
+        border: none;
+        background: none;
+        color: #fff;
+    }
+
+    header nav .media {
+        display: none;
+    }
+
+    header nav .menu {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        padding: 30px 0px;
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    header nav .menu li .drop {
+        background: none;
+
+    }
+
+    header nav .menu li .drop li a {
+        color: #fff !important;
+    }
+
+    header nav .menu li:hover i {
+        transform: rotate(0);
+
+    }
+    /* home */
+    main section #home{
+        background-position: left;
+        padding: 100px;
+    }
+    main section #home .text h6{
+        font-size: 14px;
+    }
+        main section #home .text h1{
+            font-size: 45px;
+            margin: 20px 0;
+            max-width: 421px;
+        }
+   main section #home .buttons button{
+    padding: 5px 40px;
+    font-size: 14px;
+    font-weight: bold;
+   }
+   /* about */
+   main section #about{
+    flex-direction: column;
+    padding: 0 0 100px;
+    gap: 40px;
+   }
+   main section #about .text-about h1{
+    margin: 0 0 40px;
+    max-width: 351px;
+   }
+   main section #about .text-about span{
+    margin: 16px 0;
+    display: inline-block;
+   }
+   /* cofe */
+   main section #cofe .cofe-menu{
+    grid-template-columns: auto;
+   }
+   /* review */
+   main section #review .image-review{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+   }
+   main section #review .image-review div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   
+   main section #review .image-review div:last-child{
+    flex-direction: column;
+   }
+   /* blog */
+   main section #blog .comment-blog{
+    flex-direction: column;
+   }
+   main section #blog .list-blog{
+    flex-direction: column;
+    align-items: center;
+   }
+   /* pages */
+   main section #pages .list-pages{
+    flex-direction: column;
+    gap: 20px;
+   }
+   /* footer */
+   footer .footer{
+    flex-wrap: wrap;
+   }
+}
+/* mobile */
+@media(max-width:768px){
+    /* home */
+ main section #home{
+    padding: 160px 40px;
+    height: 920px;
+ }
+ main section #home .text h1{
+    font-size: 40px;
+ }
+ /* about */
+ main section #about .video{
+  width: 95%;
+  border-radius: 30px;
+ }
+ main section #about .video::before{
+    border-radius: 30px;
+ }
+ /* cofe */
+ main section #cofe h1,
+ main section #cofe>p{
+    text-align: center;
+    
+ }
+
+ main section #cofe .cofe-menu{
+    
+    padding: 80px 10px;
+ }
+ /* review */
+ main section #review{
+    padding: 120px 0;
+ }
+ main section #review .text-review h1,
+ main section #review .text-review  p{
+    text-align: center;
+ }
+ main section #review .text-review p{
+    font-size: 14px;
+ }
+ main section #review .image-review div:last-child .img{
+    width: 78.8%;
+ }
+ /* blog */
+ main section #blog{
+    padding: 120px 0;
+    gap: 0;
+ }
+
+
+ main section #blog .text-blog{
+    padding: 0 15px 60px;
+ }
+ 
+
+ main section #blog .text-blog h1{
+    font-size: 36px;
+ }
+ main section #blog .comment-blog{
+    padding: 0 15px;
+ }
+ main section #blog .list-blog{
+    padding: 70px 15px;
+ }
+ /* pages */
+ main section #pages .list-pages{
+    padding: 40px 10px;
+ }
+ /* footer */
+ footer .footer{
+    flex-direction: column;
+    padding: 40px 10px;
+ }
+ footer .footer div .input input{
+    width: 190px;
+ }
+}
